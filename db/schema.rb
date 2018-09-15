@@ -10,21 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_09_14_124015) do
-
-  create_table "associations", force: :cascade do |t|
-    t.integer "plantae_id"
-    t.integer "plantae_id2"
-    t.integer "source"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "id_sol"
-    t.index ["plantae_id"], name: "index_associations_on_plantae_id"
-  end
-=======
-ActiveRecord::Schema.define(version: 2018_09_15_152703) do
->>>>>>> 08190e864c3328e02b32a72dcfd1a0a84d867bc5
 
   create_table "dons", force: :cascade do |t|
     t.integer "user_id"
