@@ -28,5 +28,4 @@ class HomeController < ApplicationController
       @tab_don = Don.where(user_id: @id_user)
     end
   end
-
 end

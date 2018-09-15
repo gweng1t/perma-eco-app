@@ -1,3 +1,3 @@
 class Sol < ApplicationRecord
-  belongs_to :ecosystem
+  has_many :associations
 end
