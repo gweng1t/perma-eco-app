@@ -1,0 +1,16 @@
+I, [2018-09-15T11:44:27.420699 #4016]  INFO -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681] Started GET "/" for 127.0.0.1 at 2018-09-15 11:44:27 +0200
+I, [2018-09-15T11:44:27.423625 #4016]  INFO -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681] Processing by HomeController#index as HTML
+I, [2018-09-15T11:44:27.431470 #4016]  INFO -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681]   Rendering home/index.html.erb within layouts/application
+I, [2018-09-15T11:44:27.432728 #4016]  INFO -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681]   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2018-09-15T11:44:27.432856 #4016]  INFO -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681] Completed 500 Internal Server Error in 9ms
+F, [2018-09-15T11:44:27.433477 #4016] FATAL -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681]   
+F, [2018-09-15T11:44:27.433512 #4016] FATAL -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681] ActionView::Template::Error (The asset "forest.jpg" is not present in the asset pipeline.):
+F, [2018-09-15T11:44:27.433690 #4016] FATAL -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681]     4: 
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]     5:     <div class="site-overlay"></div>
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]     6: 
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]     7:     <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url(<%= asset_path 'forest.jpg' %>)'>
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]     8:         <div class="d-flex align-items-center">
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]     9:             <div class="container">
+[c80a3bd3-9e22-4521-b700-5e92e1a77681]    10:                 <div class=" row">
+F, [2018-09-15T11:44:27.433716 #4016] FATAL -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681]   
+F, [2018-09-15T11:44:27.433744 #4016] FATAL -- : [c80a3bd3-9e22-4521-b700-5e92e1a77681] app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb__202711257607533805_47173059050340'
