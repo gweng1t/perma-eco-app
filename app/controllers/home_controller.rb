@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     if params[:plante] != nil && Plantae.find_by(Plante: @plante_cherche) != nil
       @id_plante_search = Plantae.find_by(Plante: @plante_cherche).id
       
-      @tab_association_plante = Association.where(plantae_id2: @id_plante_search )
+      @tab_association_plante = Ecosystem.where(plantae_id2: @id_plante_search )
     else
       redirect_to root_path
     end
@@ -28,5 +28,4 @@ class HomeController < ApplicationController
       @tab_don = Don.where(user_id: @id_user)
     end
   end
-
 end
