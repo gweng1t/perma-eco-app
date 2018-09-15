@@ -1,20 +1,19 @@
 class PlantesController < ApplicationController
-  def add
-    
+  def add 
     Plantae.create(Famille: params[:Famille], Type: params[:type], Plante: params[:Plantae1])
     id = Plantae.last.id
     Plantae.create(Famille: params[:Famille1], Type: params[:type1], Plante: params[:Plantae2])
     id1 = Plantae.last.id
     Sol.create(type_sol: params[:type_sol]);
     id2 = Sol.last.id
-    if params[:Association] == "CONSEILLÉ"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 1)
-    elsif params[:Association] == "DÉCONSEILLÉ"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 0)
-    elsif params[:Association] == "CONTRADICTOIRE"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 2)
+    if params[:Ecosystem] == "CONSEILLÉ"
+      Ecosystem.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 1)
+    elsif params[:Ecosystem] == "DÉCONSEILLÉ"
+      Ecosystem.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 0)
+    elsif params[:Ecosystem] == "CONTRADICTOIRE"
+      Ecosystem.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 2)
     else
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: nil)
+      Ecosystem.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: nil)
     end
   end
 end
