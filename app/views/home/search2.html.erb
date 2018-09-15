@@ -1,67 +1,62 @@
-
-<div class="title-space-lg parallax-overlay bg-parallax">
+<div class="page-titles-img title-space-lg parallax-overlay bg-parallax" data-jarallax='{"speed": 0.4}' style='background-image: url("images/bg13.jpg");background-position:top center;'>
   <div class="container">
       <div class="row">
-          <div class=" col-md-13">
-
+          <div class=" col-md-12">
+              <h1 class="text-uppercase">Résultats de recherche</h1>
           </div>
       </div>
   </div>
-
 </div><!--page title end-->
-<div class="container">
-
-  <div class="row">
-
-
-    <div class="row">
-
-				<% if params[:plante] != nil %>
-      <% @tab_association_plante.each do |association| %>
+<div class="container" style="position:relative">
+	<% if params[:plante] != nil %>
+		<br><br>
+		<h2>Conseillé</h2>
+		<table class="table">
+		<% @tab_association_plante.each do |association| %>
 			<% if association.source == 1 %>
-			      <div class="col-lg-4 col-md-6 mb-4">
-				       <div class="card h-100">
-								  <%= image_tag(association.plantae.Img, size: "358x330") %>
-								  <div class="card-body">
-				               <p class="card-text">
-
-												 <h5>CONSEILLER</h5>
-				 									<li> <a href="/search/<%= association.plantae.Plante %>"> <%= association.plantae.Plante %> </a> </li>
-											</p>
-				           </div>
-			          </div>
-			        </div>
-				<% elsif association.source == 0 %>
-				      <div class="col-lg-4 col-md-6 mb-4">
-					       <div class="card h-100">
-					          <%= image_tag("avatar.jpeg", size: "358x255") %>
-					           <div class="card-body">
-					               <p class="card-text">
-
-													 <h5>DECONSEILLER</h5>
-					 									<li> <a href="/search/<%= association.plantae.Plante %>"> <%= association.plantae.Plante %> </a> </li>
-												</p>
-					           </div>
-				          </div>
-				        </div>
-								<% elsif association.source == 2 %>
-								<div class="col-lg-4 col-md-6 mb-4">
-									 <div class="card h-100">
-											<%= image_tag("avatar.jpeg", size: "358x255") %>
-											 <div class="card-body">
-													 <p class="card-text">
-
-														 <h5>AVIS CONTRADICTOIRE</h5>
-															<li> <a href="/search/<%= association.plantae.Plante %>"> <%= association.plantae.Plante %> </a> </li>
-													</p>
-											 </div>
-										</div>
-									</div>
-																	<% end %>
-
-      <% end %>
-
+				<tbody>
+					<td><%= image_tag(association.plantae.Img, size: "80x80") %></td>
+					<td><%= association.plantae.Plante %></td>
+					<td>- sol -</td>
+					<td><a href="/search/<%= association.plantae.Plante %>">Autres combinaisons</a></td>
+					<td>Validé ?</td>
+				</tbody>
 			<% end %>
-    </div>
-  </div>
+		<% end %>
+		</table>
+		<br><br>
+		<h2>Déconseillé</h2>
+		<table class="table">
+		<% @tab_association_plante.each do |association| %>
+			<% if association.source == 0 %>
+				<tbody>
+					<td><%= image_tag(association.plantae.Img, size: "80x80") %></td>
+					<td><%= association.plantae.Plante %></td>
+					<td>- sol -</td>
+					<td><a href="/search/<%= association.plantae.Plante %>">autres combinaisons</a></td>
+					<td>Validé ?</td>
+				</tbody>
+			<% end %>
+		<% end %>
+		</table>
+		<br><br>
+		<h2>Avis contradictoires</h2>
+		<table class="table">
+		<% @tab_association_plante.each do |association| %>
+			<% if association.source == 2 %>
+				<tbody>
+					<td><%= image_tag(association.plantae.Img, size: "80x80") %></td>
+					<td><%= association.plantae.Plante %></td>
+					<td>- sol -</td>
+					<td><a href="/search/<%= association.plantae.Plante %>">autres combinaisons</a></td>
+					<td>Validé ?</td>
+				</tbody>
+			<% end %>
+		<% end %>
+		</table>
+		<br><br>
+
+	<% else %>
+		<h1> <a href="/">Refaire une recherche</a> </h1>
+	<% end %>
 </div>
