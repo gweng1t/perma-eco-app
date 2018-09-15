@@ -184,9 +184,7 @@ tab_association_patate = [	1, nil, 1, nil, nil, nil,
 
 puts "-"*70
 puts "\t----- Création de #{nb_plantae} Associations pour l'Ail -----"
-puts "-"*70end
-num_assso = 0
-nb_de_fo
+puts "-"*70
 
 # ASSOCIATION POUR 'AIL'
 num_assso = 0
