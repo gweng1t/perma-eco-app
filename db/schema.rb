@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_124015) do
+ActiveRecord::Schema.define(version: 2018_09_11_124816) do
 
   create_table "associations", force: :cascade do |t|
     t.integer "plantae_id2"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2018_09_14_124015) do
     t.integer "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "id_sol"
     t.index ["plantae_id"], name: "index_associations_on_plantae_id"
     t.index ["sol_id"], name: "index_associations_on_sol_id"
   end
