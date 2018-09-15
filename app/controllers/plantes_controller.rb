@@ -1,5 +1,8 @@
 class PlantesController < ApplicationController
-  def add 
+  def add
+    puts "==================================================================================="
+    puts params[:Envoyer]
+    puts "==================================================================================="
     Plantae.create(Famille: params[:Famille], Type: params[:type], Plante: params[:Plantae1])
     id = Plantae.last.id
     Plantae.create(Famille: params[:Famille1], Type: params[:type1], Plante: params[:Plantae2])

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 	devise_for :users
 
 	post '/equipe', to: 'equipe#create'
-	get '/equipe', to: 'equipe#index'
+	get '/equipes', to: 'equipe#index'
 
 	resources :charges, only: [:don, :create, :thanks]
 
@@ -26,5 +26,6 @@ Rails.application.routes.draw do
 	get '/search/:plante', to: 'home#search2'
 
 	get '/profil', to: 'home#profil'
-	get '/add', to: 'plantes#add'
+	get '/add', to: 'plantes#index'
+	post '/add/add', to: 'plantes#add'
 end
