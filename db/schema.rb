@@ -61,13 +61,17 @@ ActiveRecord::Schema.define(version: 2018_09_16_101958) do
   end
 
   create_table "subjects", force: :cascade do |t|
+    t.integer "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_subjects_on_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
+    t.integer "forum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["forum_id"], name: "index_topics_on_forum_id"
   end
 
   create_table "users", force: :cascade do |t|
