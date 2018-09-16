@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_09_14_123831) do
     t.integer "plantae_id"
     t.integer "sol_id"
     t.integer "plantae_id2"
+    t.boolean "is_validate"
     t.integer "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
