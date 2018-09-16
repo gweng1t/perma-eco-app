@@ -15,26 +15,21 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" aria-haspopup="true" aria-expanded="false" href=<%= root_path %> >Accueil</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/presentation" aria-haspopup="true" aria-expanded="false">
-                            Présentation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/partenaires" aria-haspopup="true" aria-expanded="false">
-                            Nos partenaires
-                        </a>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Le projet</a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="/presentation" class="dropdown-item">Présentation</a></li>
+                            <li><a href="/don" class="dropdown-item">Faire un don</a></li>
+                        </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/don">Don</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-haspopup="true" aria-expanded="false" href="/equipe">L'équipe</a>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" aria-haspopup="true" aria-expanded="false" href="/fondation ">Fondation</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Communauté</a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="/equipe" class="dropdown-item">L'équipe</a></li>
+                            <li><a href="/partnaires" class="dropdown-item">Nos partenaires</a></li>
+                        </ul>
                     </li>
 
                     <% if user_signed_in? %>

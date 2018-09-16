@@ -1,7 +1,3 @@
-<!-- <div id="preloader">
-        <div id="preloader-inner"></div>
-</div>-->
-
     <div class="site-overlay"></div>
 
     <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url(<%= asset_path 'forest.jpg' %>)'>
@@ -12,19 +8,19 @@
                         <div class="hero-text-style1">
                             <div class="tlt h1 font700 text-white text-capitalize mb20">
                                 <ul class="texts">                                       
-                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Exemple 1 de texte défilant</li>
-                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Exemple 2 de texte défilant</li>
-                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Exemple 3 de texte défilant</li>
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">La première base de données sur la vie</li>
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Un éco-système pour les comprendre</li>
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Rejoins le mouvement</li>
                                 </ul>
                             </div><!--/.tlt-->
                             <p class="lead text-white-gray">
-                                Une phrase qui résume l'objectif du site
+                                Commence à utiliser U-MAN avec une simple recherche de plante à planter !
                             </p>
                             <form method="post" action="/search">
                                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                                 <div class="row">
                                     <div class="col-md-12 mb20">
-                                        <input type="text" class="form-control" placeholder="Ex: tomates sol argileux" required="" name="plante_search">
+                                        <input type="text" class="form-control" placeholder="Exemple : tomate" required="" name="plante_search">
                                     </div>
                                     
                                     <div class="col-md-12">
@@ -39,18 +35,35 @@
             </div>
         </div>
     </div><!--hero-->
+ 
+    <div class="container pb90 pt70">
+
+        <h3>Un objectif simple</h3>
+        <p>
+          Le projet U-MAN est né de la nécessité d'une compréhension des relations des organismes vivant entre eux et dans leurs environnement</p>
+        <p>
+            Avec l'émergence des nouvelles technologies numériques, et un besoin croissant de data, l'agriculture, l'écologie et la permaculture ont l'opportunité grandissante de travailler ensemble.
+        </p>
+         <p>
+            La révolution numérique transformant le secteur de la production agricole, forestière, biocarburants peut aller encore plus loin. La permaculture s'inscrit dans cette démarche comme une solution évidante. U-MAN établie le premier lien de recherche
+        </p>
+    </div>
+
     <div class="cta bg-faded pt50 pb50">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2 class="h3">We provide the great support to our customers</h2>
+                    <h2 class="h3">Une communauté de chercheurs internationale</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.
+                        U-MAN est une plateforme de développement et de recherche scientifique, dématerialisée, elle permet la mise en relation des acteurs via la standardisation de l'information.
                     </p>
                 </div>
                 <div class="col-lg-3">
+
+                  <!-- Formulaire d'ajout bdd-->
+
                     <a href="#" class="btn btn-rounded btn-lg btn-outline-primary mt30">
-                        Buy Now
+                        Nous rejoindre
                     </a>
                 </div>
             </div>
@@ -59,52 +72,28 @@
     <div class="container pt60 pb30">
         <div class="row">
             <div class="col-lg-4 mb30">
-                <img src="images/img12.jpg" alt="" class="img-fluid mb20">
-                <h4 class="text-uppercase">why choose us</h4>
+                <%= image_tag('index1.jpg', :size => "300x300", :class => "mb30") %>
+                <h4 class="text-uppercase">Nous faire confiance</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.
+                    Nous sommes fiers d'être open-source et saurons grandir avec la précision nécessaire.
                 </p>
             </div>
             <div class="col-lg-4 mb30">
-                <img src="images/img13.jpg" alt="" class="img-fluid mb20">
-                <h4 class="text-uppercase">Our Mission</h4>
+                <%= image_tag('index2.jpg', :size => "300x300", :class => "mb30") %>
+                <h4 class="text-uppercase">Notre mission</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.
+                    La compréhension des synergies dans le monde du vivant et ses relations symbiotiques.
                 </p>
             </div>
             <div class="col-lg-4 mb30">
-                <img src="images/img14.jpg" alt="" class="img-fluid mb20">
-                <h4 class="text-uppercase">Our strategy</h4>
+                <%= image_tag('index3.jpg', :size => "300x300", :class => "mb30") %>
+                <h4 class="text-uppercase">Notre stratégie</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.
+                    Développer le premier outil dématerialisé permettant l'agglomération données liées aux écosystèmes à l'échelle mondiale
                 </p>
             </div>
         </div>
     </div>
-
-    <div class="half-image-content bg-faded">
-        <div class="content-img bg-parallax pos-right hidden-md-down" data-jarallax='{"speed": 0.2}' style="background:url(images/img-half2.jpg) no-repeat;">
-        </div>
-        <img src="images/img-half2.jpg" class="visible-lg-down hidden-lg-up img-fluid" alt="">
-        <div class="container">
-            <div class='row'>
-            <div class="col-lg-5  pt70 pb70">
-                <h2 class="mb40">
-                    Limitless possibilities create incredible layouts
-                </h2>
-                <div class="clearfix">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p><br>
-                    <a href="#" class="btn btn-outline-primary">View Features</a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div><!--half image section-->
  
     <!-- <div class="bg-parallax parallax-overlay pt100 pb100" data-jarallax-video="https://www.youtube.com/watch?v=I6jmZ5plZ3o&" data-jarallax-original-styles="null">
         <div class="container text-center">
