@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_09_14_123831) do
-=======
 ActiveRecord::Schema.define(version: 2018_09_14_124015) do
->>>>>>> renametablebis
 
   create_table "dons", force: :cascade do |t|
     t.integer "user_id"
@@ -34,21 +30,12 @@ ActiveRecord::Schema.define(version: 2018_09_14_124015) do
 
   create_table "gardens", force: :cascade do |t|
     t.integer "plantae_id"
-<<<<<<< HEAD
-    t.integer "sol_id"
     t.integer "plantae_id2"
-    t.boolean "is_validate"
-=======
-    t.integer "plantae_id2"
->>>>>>> renametablebis
     t.integer "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_valide"
     t.index ["plantae_id"], name: "index_gardens_on_plantae_id"
-<<<<<<< HEAD
-    t.index ["sol_id"], name: "index_gardens_on_sol_id"
-=======
->>>>>>> renametablebis
   end
 
   create_table "plantaes", force: :cascade do |t|
