@@ -1,24 +1,42 @@
-# README
+README
+Notre site :
+https://.herokuapp.com/ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Les fonctionalités
 
-* System dependencies
 
-* Configuration
+Photos de chats (vue index et détail par image + ajout au panier)
 
-* Database creation
+L'utilisateur devra s'inscrire pour faire un achat
 
-* Database initialization
+Accès au dashboard (pour les administrateurs) Identifiants pour tester l'affichage dans le profil :
 
-* How to run the test suite
+email : jojo@jojo.fr
+mot de passe : jeteste
+Panier
 
-* Services (job queues, cache servers, search engines, etc.)
+Possibilité de supprimer un article
+Passer une commande
 
-* Deployment instructions
+Envoi d'email de confirmation
 
-* ...
+Paiement en ligne avec Stripe
+
+Model Base de donnée Card - Item -> Intransitive Associations
+https://image.ibb.co/nKzKpz/Capture_d_e_cran_2018_09_16_a_22_00_53.png
+
+Visualiser le site en local
+$ bundle install --without production
+$ rails db:migrate
+$ rails db:seed
+$ ajouter les crédentials de test Stripe dans le fichier .bash_profile (https://stripe.com/docs/checkout/rails)
+$ rails s
+❗️Pour afficher les images, décommente la partie qui crée des Items dans le seed.rb puis fais rails db : seed
+
+L'équipe
+➢ Rémi Boivin 🤖
+➢ Gwendoline Cassand 👩‍💻
+➢ Mai Lan Peng 👻
+➢ Joanne Rabenarisoa 😽
