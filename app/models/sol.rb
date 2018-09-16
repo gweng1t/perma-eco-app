@@ -1,3 +1,3 @@
 class Sol < ApplicationRecord
-  has_many :associations
+  has_many :gardens
 end

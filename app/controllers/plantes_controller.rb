@@ -10,13 +10,13 @@ class PlantesController < ApplicationController
     Sol.create(type_sol: params[:type_sol]);
     id2 = Sol.last.id
     if params[:Ecosystem] == "CONSEILLÉ"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 1)
+      Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 1)
     elsif params[:Ecosystem] == "DÉCONSEILLÉ"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 0)
+      Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 0)
     elsif params[:Ecosystem] == "CONTRADICTOIRE"
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 2)
+      Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 2)
     else
-      Association.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: nil)
+      Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: nil)
     end
   end
 end
