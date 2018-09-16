@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 	post '/search', to: 'home#search'
 	get '/search/:plante', to: 'home#search2'
 
+	get 'forum/', to: 'forum#index'
 	get '/profil', to: 'home#profil'
 	post '/add/add', to: 'plantes#add'
 	post '/add', to: 'plantes#add'

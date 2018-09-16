@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_124015) do
+ActiveRecord::Schema.define(version: 2018_09_16_101958) do
 
   create_table "dons", force: :cascade do |t|
     t.integer "user_id"
@@ -28,14 +28,21 @@ ActiveRecord::Schema.define(version: 2018_09_14_124015) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "forums", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "gardens", force: :cascade do |t|
     t.integer "plantae_id"
     t.integer "plantae_id2"
+    t.integer "sol_id"
     t.integer "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_valide"
     t.index ["plantae_id"], name: "index_gardens_on_plantae_id"
+    t.index ["sol_id"], name: "index_gardens_on_sol_id"
   end
 
   create_table "plantaes", force: :cascade do |t|
@@ -49,6 +56,16 @@ ActiveRecord::Schema.define(version: 2018_09_14_124015) do
 
   create_table "sols", force: :cascade do |t|
     t.string "type_sol"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
