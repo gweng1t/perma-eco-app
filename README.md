@@ -5,11 +5,11 @@
 ## Notre site :
 🥓 https://chatonpix.herokuapp.com/ 🥓
 
-<img src = "https://i.imgur.com/3wld7Pp.gif"</img>
+
 
 ## Les fonctionalités
 
-<img src = "https://image.ibb.co/kQjPYU/Capture_d_e_cran_2018_08_27_a_14_23_07.png"></img>
+<img src = "https://image.ibb.co/nKzKpz/Capture_d_e_cran_2018_09_16_a_22_00_53.png"></img>
 - Photos de chats 
 (vue index et détail par image + ajout au panier)
 
@@ -31,7 +31,7 @@
 - Paiement en ligne avec Stripe
 
 ## Model Base de donnée Card - Item -> Intransitive Associations
-<img src = "https://image.ibb.co/nKzKpz/Capture_d_e_cran_2018_09_16_a_22_00_53.png"</img>
+
 
 ## Visualiser le site en local
 ```sh
