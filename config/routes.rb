@@ -26,5 +26,6 @@ Rails.application.routes.draw do
 	get '/search/:plante', to: 'home#search2'
 
 	get '/profil', to: 'home#profil'
-	get '/add', to: 'plantes#add'
+	get '/add', to: 'plantes#index'
+	post '/add/add', to: 'plantes#add'
 end
