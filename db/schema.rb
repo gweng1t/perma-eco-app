@@ -10,18 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_11_124816) do
-
-  create_table "associations", force: :cascade do |t|
-    t.integer "plantae_id2"
-    t.integer "plantae_id"
-    t.integer "sol_id"
-    t.integer "source"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["plantae_id"], name: "index_associations_on_plantae_id"
-    t.index ["sol_id"], name: "index_associations_on_sol_id"
-  end
+ActiveRecord::Schema.define(version: 2018_09_14_123831) do
 
   create_table "dons", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +26,17 @@ ActiveRecord::Schema.define(version: 2018_09_11_124816) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "gardens", force: :cascade do |t|
+    t.integer "plantae_id"
+    t.integer "sol_id"
+    t.integer "plantae_id2"
+    t.integer "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plantae_id"], name: "index_gardens_on_plantae_id"
+    t.index ["sol_id"], name: "index_gardens_on_sol_id"
   end
 
   create_table "plantaes", force: :cascade do |t|
