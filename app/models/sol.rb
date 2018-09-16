@@ -1,3 +1,3 @@
 class Sol < ApplicationRecord
-  belongs_to :association
+  has_many :associations
 end
