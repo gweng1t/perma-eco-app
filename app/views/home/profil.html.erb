@@ -76,11 +76,9 @@
     </div>
     <br>
 </div>
-<<<<<<< HEAD
 <br>
 <!--back to top-->
 <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
-=======
 <div class="bg-faded pt90 pb60">
   <div class="title-heading1 mb10">
     <h3>Ajouter une nouvelle combinaison</h3>
@@ -90,31 +88,33 @@
     </div>
     <div class="row pb30">
       <div class="col-lg-6 col-md-6 mr-auto ml-auto col-sm-8">
-        <form>
+        <form action="add/" method="post">
           <div class="form-group"></br></br>
-            <input type="text" class="form-control" name="Famille" placeholder="Famille de la plante 1">
+            <input type="text" class="form-control" name="Famille" placeholder="Famille de la plante 1" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="type" placeholder="Type (ex: fleur, racine, fruit ... )">
+            <input type="text" class="form-control" name="type" placeholder="Type (ex: fleur, racine, fruit ... )" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="Plantae1" placeholder="Plante 1">
+            <input type="text" class="form-control" name="Plantae1" placeholder="Plante 1" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="Famille1" placeholder="Famille de la plante 2">
+            <input type="text" class="form-control" name="Famille1" placeholder="Famille de la plante 2" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="type1" placeholder="Type (ex: fleur, racine, fruit ... )">
+            <input type="text" class="form-control" name="type1" placeholder="Type (ex: fleur, racine, fruit ... )" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="Plantae2" placeholder="Plante 2">
+            <input type="text" class="form-control" name="Plantae2" placeholder="Plante 2" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="type_sol" placeholder="Type de sol (ex : calcaire, humifère ... )">
+            <input type="text" class="form-control" name="type_sol" placeholder="Type de sol (ex : calcaire, humifère ... )" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="Category" placeholder="Catégorie (conseillé, déconseillé, contradictoire ou vide)">
+            <input type="text" class="form-control" name="Category" placeholder="Catégorie (conseillé, déconseillé, contradictoire ou vide)" >
           </div>
+
+          <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" / required>
           <div class="form-group">
             <button type="submit" class="btn btn-rounded btn-primary btn-block">Envoyer</button>
           </div>

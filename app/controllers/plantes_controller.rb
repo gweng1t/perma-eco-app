@@ -9,11 +9,11 @@ class PlantesController < ApplicationController
     id1 = Plantae.last.id
     Sol.create(type_sol: params[:type_sol]);
     id2 = Sol.last.id
-    if params[:Ecosystem] == "CONSEILLÉ"
+    if params[:Category] == "CONSEILLÉ"
       Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 1)
-    elsif params[:Ecosystem] == "DÉCONSEILLÉ"
+    elsif params[:Category] == "DÉCONSEILLÉ"
       Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 0)
-    elsif params[:Ecosystem] == "CONTRADICTOIRE"
+    elsif params[:Category] == "CONTRADICTOIRE"
       Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: 2)
     else
       Garden.create(plantae_id: id, plantae_id2: id1, sol_id:id2, source: nil)
