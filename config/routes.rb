@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
-	root to: "home#index"
+	root to: "home#presentation"
 
+	get '/technologie', to: 'home#technologie'
+
+<<<<<<< HEAD
 	get '/presentation', to: 'home#presentation'
 
+=======
+>>>>>>> front
 	mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
 	devise_for :users
