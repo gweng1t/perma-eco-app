@@ -28,4 +28,5 @@ Rails.application.routes.draw do
 	get '/profil', to: 'home#profil'
 	get '/add', to: 'plantes#index'
 	post '/add/add', to: 'plantes#add'
+	post '/add', to: 'plantes#add'
 end
