@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
 
-	root to: "home#index"
+	root to: "home#presentation"
 
-	get '/presentation', to: 'home#presentation'
-	
+	get '/technologie', to: 'home#technologie'
+
 	mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
 	devise_for :users
 
 	post '/equipe', to: 'equipe#create'
 	get '/equipe', to: 'equipe#index'
-	
+
 	resources :charges, only: [:don, :create, :thanks]
 
 	get '/fondation', to: 'home#fondation'
@@ -26,6 +26,6 @@ Rails.application.routes.draw do
 	get '/search/:plante', to: 'home#search2'
 
 	get '/profil', to: 'home#profil'
-
+	post '/add/add', to: 'plantes#add'
+	post '/add', to: 'plantes#add'
 end
-

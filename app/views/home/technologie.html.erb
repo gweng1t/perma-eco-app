@@ -1,0 +1,116 @@
+<div id="preloader">
+        <div id="preloader-inner"></div>
+</div><!--/preloader-->
+
+    <div class="site-overlay"></div>
+
+    <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url(<%= asset_path 'forest.jpg' %>)'>
+        <div class="d-flex align-items-center">
+            <div class="container">
+                <div class=" row">
+                    <div class="col-lg-10 ml-auto mr-auto text-center">
+                        <div class="hero-text-style1">
+                            <div class="tlt h1 font700 text-white text-capitalize mb20">
+                                <ul class="texts">
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">La première base de données sur la vie</li>
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Un éco-système pour les comprendre tous</li>
+                                    <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Rejoins le mouvement</li>
+                                </ul>
+                            </div><!--/.tlt-->
+                            <p class="lead text-white-gray">
+                                Commencer à utiliser U-MAN
+                            </p>
+                            <form method="post" action="/search">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <div class="row">
+                                    <div class="col-md-12 mb20">
+                                        <input type="text" class="form-control" placeholder="Ex: tomates sol argileux" required="" name="plante_search">
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <!-- IL FAUT CHANGER LE BUTTON EN BALISE <a> :D -->
+                                        <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--hero-->
+
+    <!-- open source base de données organismes -->
+
+    <div class="page-custom-header title-space-lg bg-parallax mb80 parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg16.jpg");background-position:top center;'>
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-md-6">
+                            <h2 class="text-white">Une communauté proactive</h2>
+
+                            <p class="text-white-gray">
+                            U-MAN est un projet visant à moderniser et simplifier l'échange d'information touchant la recherche sur les écosytèmes naturels
+                            </p>
+                            <a href="/partners" class="btn btn-white-outline">Voir nos partenaires</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--page title end-->
+    <div class="container pb90">
+        <h3>Un objectif simple</h3>
+        <p>
+          Le projet U-MAN est né de la nécessité d'une compréhension des relations des organismes vivant entre eux et dans leurs environnement</p>
+        <p>
+            Avec l'émergence des nouvelles technologies numériques, et un besoin croissant de data, l'agriculture, l'écologie et la permaculture ont l'opportunité grandissante de travailler ensemble.
+        </p>
+         <p>
+            La révolution numérique transformant le secteur de la production agricole, forestière, biocarburants peut aller encore plus loin. La permaculture s'inscrit dans cette démarche comme une solution évidante. U-MAN établie le premier lien de recherche
+        </p>
+    </div>
+
+    <div class="cta bg-faded pt50 pb50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="h3">Une communauté de chercheurs internationale</h2>
+                    <p>
+                        U-MAN est une plateforme de développement et de recherche scientifique, dématerialisée, elle permet la mise en relation des acteurs via la standardisation de l'information.
+                    </p>
+                </div>
+                <div class="col-lg-3">
+
+                  <!-- Formulaire d'ajout bdd-->
+
+                    <a href="partenaires" class="btn btn-rounded btn-lg btn-outline-primary mt30">
+                        Nous rejoindre
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt60 pb30">
+        <div class="row">
+            <div class="col-lg-4 mb30">
+                <img src="images/img12.jpg" alt="" class="img-fluid mb20">
+                <h4 class="text-uppercase">Nous faire confiance</h4>
+                <p>
+                    Nous sommes fiers d'être <b>open-source</b>, assermentée par les acteurs publics
+                </p>
+            </div>
+            <div class="col-lg-4 mb30">
+                <img src="images/img13.jpg" alt="" class="img-fluid mb20">
+                <h4 class="text-uppercase">Notre mission</h4>
+                <p>
+                    La compréhension des synergies dans le monde du vivant et ses relations symbiotiques.
+                </p>
+            </div>
+            <div class="col-lg-4 mb30">
+                <img src="images/img14.jpg" alt="" class="img-fluid mb20">
+                <h4 class="text-uppercase">Notre stratégie</h4>
+                <p>
+                    Le premier outil dématerialisé permettant l'agglomération de bases de données au niveau mondial
+                </p>
+            </div>
+        </div>
+    </div>
+ <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>

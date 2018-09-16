@@ -19,7 +19,12 @@
 					<td><%= association.plantae.Plante %></td>
 					<td>- sol -</td>
 					<td><a href="/search/<%= association.plantae.Plante %>">Autres combinaisons</a></td>
-					<td>Validé ?</td>
+					<td><% if association.is_valide == true%>
+                  Validé
+                  <% else %>
+                    En cours de validation
+                    <%end%>
+            </td>
 				</tbody>
 			<% end %>
 		<% end %>
@@ -34,7 +39,12 @@
 					<td><%= association.plantae.Plante %></td>
 					<td>- sol -</td>
 					<td><a href="/search/<%= association.plantae.Plante %>">autres combinaisons</a></td>
-					<td>Validé ?</td>
+          <td><% if association.is_valide == true%>
+                  Validé
+                  <% else %>
+                    En cours de validation
+                    <%end%>
+            </td>
 				</tbody>
 			<% end %>
 		<% end %>
@@ -49,7 +59,12 @@
 					<td><%= association.plantae.Plante %></td>
 					<td>- sol -</td>
 					<td><a href="/search/<%= association.plantae.Plante %>">autres combinaisons</a></td>
-					<td>Validé ?</td>
+          <td><% if association.is_valide == true%>
+                  Validé
+                  <% else %>
+                    En cours de validation
+                    <%end%>
+            </td>
 				</tbody>
 			<% end %>
 		<% end %>
