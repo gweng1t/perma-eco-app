@@ -1,4 +1,4 @@
 class Garden < ApplicationRecord
 	belongs_to :plantae
- 	belongs_to :sol
+	has_many :sols
 end

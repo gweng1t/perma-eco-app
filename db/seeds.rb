@@ -191,7 +191,6 @@ num_assso = 0
 ((tab_association_ail.size)+1).times do |i|
 	if i+1 != Plantae.find_by(Plante: "AIL").id
 		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "AIL").id, source: tab_association_ail[num_assso])
-		Garden.save
 		num_assso += 1
 	end
 end
