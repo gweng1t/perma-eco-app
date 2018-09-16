@@ -8,11 +8,6 @@ class CreateGardens < ActiveRecord::Migration[5.2]
       t.boolean :is_validate
     	t.integer :source
 
-		# SOURCE:
-    	# 0 = DECONSEILLER
-    	# 1 = CONSEILLER
-    	# 2 = CONTRADICTOIRE
-
 		t.timestamps
     end
   end

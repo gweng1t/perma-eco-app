@@ -112,7 +112,7 @@ Plantae.create(Plante: "VIGNE", Famille: tab_famille[19], Type: tab_type[1], Img
 # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # Garden # # # # # # # # #
+# # # # # # # # # ASSOCIATION # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # #
@@ -125,7 +125,8 @@ nb_plantae = Plantae.all.size
 	# 1 = CONSEILLER -> "VERT"
 	# 2 = CONTRADICTOIRE -> "BLEU"
 	# nil = PAS D'INFO -> "BLANC"
-tab_Garden_ail = [	0, 2, 0, nil, 1, nil, nil,
+
+tab_association_ail = [	0, 2, 0, nil, 1, nil, nil,
 						0, nil, 1, nil, nil,
 						0, 0, 0, 0, 0, 0,
 						nil, nil, 1,
@@ -136,159 +137,194 @@ tab_Garden_ail = [	0, 2, 0, nil, 1, nil, nil,
 						nil, nil, nil, 0, nil, 2, nil, 1, # 48
 						nil, nil, 2, 2, nil, nil, 0, nil, # 56
 						1,	nil, nil, 2, nil, 0, # 62
-# 						nil, nil, 1, nil, nil ] # 67
-# tab_Garden_tomate = [ 1, nil, 1, nil, 1, 0,
-# 							nil, nil, nil, 1, 1, 1, 1,
-# 							2, 2, 2, 2, 2, 0, 1, 2,
-# 							nil, nil, 2, 1, 2, 1, 1, 1,
-# 							nil, 0, nil, nil, nil, 1,
-# 							2, 2, nil, 1, nil, nil, 1, 2 ]
-#
-# tab_Garden_patate = [	1, nil, 1, nil, nil, nil,
-# 							nil, nil, nil, 1, nil, 2,
-# 							1, 1, 1, 1, 1, 1, 1, 1,
-# 							0, nil, nil, 0, nil, 0 ]
-#
-# puts "-"*70
-puts "\t----- Création de #{nb_plantae} Gardens pour l'Ail -----"
+						nil, nil, 1, nil, nil ] # 67
+
+						tab_association_artichaut = [ 	0, nil, 1, nil, 1, 2, 							# 6
+																						nil, nil, 0, nil, 1, nil,						# 12
+																						nil, nil, nil, nil, nil, 0,					# 18
+																						nil, 2, 1, 1, nil, 1,								# 24
+																						nil, 1, 1, nil, nil, nil,						# 30
+																						nil, 0, 1, nil, nil, 2, 						# 36
+																						2, nil, nil, nil, 0, nil,						# 42
+																						nil, nil, 0, nil, 2, nil,						# 48
+																						2, nil, nil, 1, 1, nil,							# 54
+																						1, 2, nil, 2, nil, nil, 						# 60
+																						2, nil, 0, nil, nil, 1,							# 66
+																						nil, nil]														# 68
+
+						tab_association_asperge = [ 	1, nil, 1, nil, nil, nil,							# 6
+																					nil, nil, nil, nil, nil, nil,					# 12
+																					nil, 1, 1, 1, 1, 1,										# 18
+																					1, nil, nil, nil, nil, nil,						# 24
+																					nil, nil, nil, nil, nil, 1,						# 30
+																					nil, nil, 1, nil, nil, nil, 					# 36
+																					1, 1, nil, 1, nil, nil,								# 42
+																					nil, 1, 1, nil, 1, nil,								# 48
+																					nil, nil, nil, nil, nil, nil,					# 54
+																					nil, nil, 1, nil, nil, nil, 					# 60
+																					nil, nil, 1, 1, nil, 1,								# 66
+																					nil, nil, 1, nil, nil, nil,						# 72
+																					nil, nil, nil, nil ]									# 76
+
+
+
+tab_association_tomate = [ 	1, nil, 1, nil, 1, 0,
+														nil, nil, nil, 1, 1, 1,
+														1, 2, 2, 2, 2, 2,
+														0, 1, 2, nil, nil, 2,
+														1, 2, 1, 1, 1, nil,
+														0, nil, nil, nil, 1, 2,
+														2, nil, 1, nil, nil, 1,
+														2 ] # 43
+
+tab_association_patate = [	1, nil, 1, nil, nil, nil,
+							nil, nil, nil, 1, nil, 2,
+							1, 1, 1, 1, 1, 1, 1, 1,
+							0, nil, nil, 0, nil, 0 ]
+
 puts "-"*70
-<<<<<<< HEAD
-# Garden POUR 'AIL'
-=======
 puts "\t----- Création de #{nb_plantae} Associations pour l'Ail -----"
 puts "-"*70
 
 # ASSOCIATION POUR 'AIL'
->>>>>>> fd2040c6feffa4905f664fe9ae86e4084e1ce9f0
 num_assso = 0
-((tab_Garden_ail.size)+1).times do |i|
+((tab_association_ail.size)+1).times do |i|
 	if i+1 != Plantae.find_by(Plante: "AIL").id
-		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "AIL").id, source: tab_Garden_ail[num_assso])
+		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "AIL").id, source: tab_association_ail[num_assso])
+		Garden.save
 		num_assso += 1
 	end
 end
-#
-#
-# # Garden de 45 plantes POUR 'tomates'
-# # SI TON TABLEAU POSSEDE TOUTES LES GardenS
-# puts "-Création de 45 Gardens pour les Tomates"
-# if tab_Garden_tomate.size == 67
-# 	nb_de_fois = ((tab_Garden_tomate.size)+1)
-# # SI TON TABLEAU N'EST PAS REMPLI
-# else
-# 	nb_de_fois = tab_Garden_tomate.size
-# end
-# num_assso = 0
-# nb_de_fois.times do |i|
-# 	if i+1 != Plantae.find_by(Plante: "TOMATE").id
-# 		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "TOMATE").id, source: tab_Garden_tomate[num_assso])
-# 		num_assso += 1
-# 	end
-# end
-#
-#
-# # Garden de 26 plantes POUR 'pomme de terre'
-# # SI TON TABLEAU POSSEDE TOUTES LES GardenS
-# puts "-Création de 45 Gardens pour les Pommes de Terre"
-# if tab_Garden_patate.size == 67
-# 	nb_de_fois = ((tab_Garden_patate.size)+1)
-# else
-# # SI TON TABLEAU N'EST PAS REMPLI
-# 	nb_de_fois = tab_Garden_patate.size
-# end
-# num_assso = 0
-# nb_de_fois.times do |i|
-# 	if i+1 != Plantae.find_by(Plante: "POMME DE TERRE").id
-# 		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "POMME DE TERRE").id, source: tab_Garden_patate[num_assso])
-# 		num_assso += 1
-# 	end
-# end
-#
-#
-#
-# tab_some_asssos = [ [nil,0,2,0,nil,1],
-# 					[0,nil,1,nil,nil,nil],
-# 					[2,1,nil,nil,1,2],
-# 					[0,nil,nil,nil,nil,nil],
-# 					[nil,nil,1,nil,nil,nil],
-# 					[1,nil,2,nil,nil,nil],
-# 					[1,nil,0,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[0,nil,0,nil,1,2],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[1,nil,1,nil,nil,2],
-# 					[nil,nil,nil,nil,nil,1],
-# 					[nil,nil,nil,nil,nil,1],
-# 					[0,1,nil,nil,1,1],
-# 					[0,1,nil,nil,1,1],
-# 					[0,1,nil,nil,1,2],
-# 					[0,1,nil,nil,1,1],
-# 					[0,1,nil,nil,1,1],
-# 					[nil,1,nil,nil,1,1],
-# 					[1,nil,2,nil,nil,1],
-# 					[nil,nil,1,nil,1,1],
-# 					[1,nil,1,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,1], #CORIANDRE
-# 					[nil,nil,1,nil,1,1],
-# 					[nil,nil,1,nil,nil,nil],
-# 					[nil,nil,1,nil,1,1],
-# 					[nil,nil,1,nil,nil,nil],
-# 					[nil,nil,1,nil,nil,nil],
-# 					[1,1,nil,nil,nil,0],
-# 					[nil,nil,nil,1,nil,nil],
-# 					[1,nil,nil,1,nil,nil],
-# 					[0,1,0,nil,1,0],
-# 					[1,nil,1,nil,nil,nil],
-# 					[1,nil,nil,1,nil,nil],
-# 					[nil,nil,nil,1,nil,nil], #GROSEILLE
-# 					[0,nil,0,1,nil,0],
-# 					[0,nil,0,1,nil,0],
-# 					[nil,nil,nil,1,nil,nil],
-# 					[1,1,nil,nil,nil,1],
-# 					[nil,nil,nil,1,nil,nil],
-# 					[0,nil,0,nil,nil,nil],
-# 					[nil,nil,nil,1,nil,nil],
-# 					[nil,nil,1,nil,1,1],
-# 					[nil,nil,0,nil,nil,nil],
-# 					[0,nil,0,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[2,nil,2,nil,nil,nil], #NAVET
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[1,nil,2,0,nil,1],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[1,nil,1,nil,nil,nil],
-# 					[1,nil,1,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[1,1,1,nil,nil,nil],
-# 					[0,nil,2,1,nil,nil],
-# 					[2,nil,nil,2,1,0], #PIMENT
-# 					[1,1,1,nil,nil,2],
-# 					[2,nil,nil,2,1,0],
-# 					[nil,nil,1,nil,1,1],
-# 					[2,nil,2,nil,nil,nil],
-# 					[1,nil,nil,nil,nil,nil],
-# 					[0,nil,0,nil,nil,1],
-# 					[0,nil,nil,nil,nil,nil],
-# 					[1,nil,1,nil,1,0],
-# 					[nil,nil,nil,nil,nil,nil],
-# 					[nil,nil,nil,nil,nil,nil] ]
-# puts "-"*80
-# puts "---- Pour juste remplir quelques Garden pour chaque plante :) ----"
-# puts "-"*80
-# 67.times do |i|
-# 	if i != Plantae.find_by(Plante: "AIL").id || i != Plantae.find_by(Plante: "TOMATE").id || i != Plantae.find_by(Plante: "POMME DE TERRE").id
-# 	# LE IF SERT JUSTE PARCE QUE PLUS HAUT J'AI DEJA BIEN REMLI POUR L'AIL / TOMATE ET POMME DE TERE :) (pas besoin de rajouter les 6 premier du coup ;D)
-# 		Garden.create(plantae_id2: i+1, plantae_id: 1, source: tab_some_asssos[i][0])
-# 		Garden.create(plantae_id2: i+1, plantae_id: 2, source: tab_some_asssos[i][1])
-# 		Garden.create(plantae_id2: i+1, plantae_id: 3, source: tab_some_asssos[i][2])
-# 		Garden.create(plantae_id2: i+1, plantae_id: 4, source: tab_some_asssos[i][3])
-# 		Garden.create(plantae_id2: i+1, plantae_id: 5, source: tab_some_asssos[i][4])
-# 		Garden.create(plantae_id2: i+1, plantae_id: 6, source: tab_some_asssos[i][5])
-# 	end
-# end
-#
-#
+
+# ASSOCIATION POUR 'ARTICHAUT'
+num_assso = 0
+((tab_association_artichaut.size)+1).times do |i|
+	if i+1 != Plantae.find_by(Plante: "ARTICHAUT").id
+		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "ARTICHAUT").id, source: tab_association_artichaut[num_assso])
+		num_assso += 1
+	end
+end
+
+# ASSOCIATION de 45 plantes POUR 'tomates'
+# SI TON TABLEAU POSSEDE TOUTES LES ASSOCIATIONS
+puts "-Création de 45 associations pour les Tomates"
+if tab_association_tomate.size == 67
+	nb_de_fois = ((tab_association_tomate.size)+1)
+# SI TON TABLEAU N'EST PAS REMPLI
+else
+	nb_de_fois = tab_association_tomate.size
+end
+num_assso = 0
+nb_de_fois.times do |i|
+	if i+1 != Plantae.find_by(Plante: "TOMATE").id
+		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "TOMATE").id, source: tab_association_tomate[num_assso])
+		num_assso += 1
+	end
+end
+
+
+# ASSOCIATION de 26 plantes POUR 'pomme de terre'
+# SI TON TABLEAU POSSEDE TOUTES LES ASSOCIATIONS
+puts "-Création de 45 associations pour les Pommes de Terre"
+if tab_association_patate.size == 67
+	nb_de_fois = ((tab_association_patate.size)+1)
+else
+# SI TON TABLEAU N'EST PAS REMPLI
+	nb_de_fois = tab_association_patate.size
+end
+num_assso = 0
+nb_de_fois.times do |i|
+	if i+1 != Plantae.find_by(Plante: "POMME DE TERRE").id
+		Garden.create(plantae_id: i+1, plantae_id2: Plantae.find_by(Plante: "POMME DE TERRE").id, source: tab_association_patate[num_assso])
+		num_assso += 1
+	end
+end
+
+
+
+tab_some_asssos = [ [nil,0,2,0,nil,1],
+					[0,nil,1,nil,nil,nil],
+					[2,1,nil,nil,1,2],
+					[0,nil,nil,nil,nil,nil],
+					[nil,nil,1,nil,nil,nil],
+					[1,nil,2,nil,nil,nil],
+					[1,nil,0,nil,nil,nil],
+					[nil,nil,nil,nil,nil,nil],
+					[0,nil,0,nil,1,2],
+					[nil,nil,nil,nil,nil,nil],
+					[1,nil,1,nil,nil,2],
+					[nil,nil,nil,nil,nil,1],
+					[nil,nil,nil,nil,nil,1],
+					[0,1,nil,nil,1,1],
+					[0,1,nil,nil,1,1],
+					[0,1,nil,nil,1,2],
+					[0,1,nil,nil,1,1],
+					[0,1,nil,nil,1,1],
+					[nil,1,nil,nil,1,1],
+					[1,nil,2,nil,nil,1],
+					[nil,nil,1,nil,1,1],
+					[1,nil,1,nil,nil,nil],
+					[nil,nil,nil,nil,nil,1], #CORIANDRE
+					[nil,nil,1,nil,1,1],
+					[nil,nil,1,nil,nil,nil],
+					[nil,nil,1,nil,1,1],
+					[nil,nil,1,nil,nil,nil],
+					[nil,nil,1,nil,nil,nil],
+					[1,1,nil,nil,nil,0],
+					[nil,nil,nil,1,nil,nil],
+					[1,nil,nil,1,nil,nil],
+					[0,1,0,nil,1,0],
+					[1,nil,1,nil,nil,nil],
+					[1,nil,nil,1,nil,nil],
+					[nil,nil,nil,1,nil,nil], #GROSEILLE
+					[0,nil,0,1,nil,0],
+					[0,nil,0,1,nil,0],
+					[nil,nil,nil,1,nil,nil],
+					[1,1,nil,nil,nil,1],
+					[nil,nil,nil,1,nil,nil],
+					[0,nil,0,nil,nil,nil],
+					[nil,nil,nil,1,nil,nil],
+					[nil,nil,1,nil,1,1],
+					[nil,nil,0,nil,nil,nil],
+					[0,nil,0,nil,nil,nil],
+					[nil,nil,nil,nil,nil,nil],
+					[2,nil,2,nil,nil,nil], #NAVET
+					[nil,nil,nil,nil,nil,nil],
+					[1,nil,2,0,nil,1],
+					[nil,nil,nil,nil,nil,nil],
+					[nil,nil,nil,nil,nil,nil],
+					[1,nil,1,nil,nil,nil],
+					[1,nil,1,nil,nil,nil],
+					[nil,nil,nil,nil,nil,nil],
+					[1,1,1,nil,nil,nil],
+					[0,nil,2,1,nil,nil],
+					[2,nil,nil,2,1,0], #PIMENT
+					[1,1,1,nil,nil,2],
+					[2,nil,nil,2,1,0],
+					[nil,nil,1,nil,1,1],
+					[2,nil,2,nil,nil,nil],
+					[1,nil,nil,nil,nil,nil],
+					[0,nil,0,nil,nil,1],
+					[0,nil,nil,nil,nil,nil],
+					[1,nil,1,nil,1,0],
+					[nil,nil,nil,nil,nil,nil],
+					[nil,nil,nil,nil,nil,nil] ]
+puts "-"*80
+puts "---- Pour juste remplir quelques association pour chaque plante :) ----"
+puts "-"*80
+67.times do |i|
+	if i != Plantae.find_by(Plante: "AIL").id || i != Plantae.find_by(Plante: "TOMATE").id || i != Plantae.find_by(Plante: "POMME DE TERRE").id
+	# LE IF SERT JUSTE PARCE QUE PLUS HAUT J'AI DEJA BIEN REMLI POUR L'AIL / TOMATE ET POMME DE TERE :) (pas besoin de rajouter les 6 premier du coup ;D)
+		Garden.create(plantae_id2: i+1, plantae_id: 1, source: tab_some_asssos[i][0])
+		Garden.create(plantae_id2: i+1, plantae_id: 2, source: tab_some_asssos[i][1])
+		Garden.create(plantae_id2: i+1, plantae_id: 3, source: tab_some_asssos[i][2])
+		Garden.create(plantae_id2: i+1, plantae_id: 4, source: tab_some_asssos[i][3])
+		Garden.create(plantae_id2: i+1, plantae_id: 5, source: tab_some_asssos[i][4])
+		Garden.create(plantae_id2: i+1, plantae_id: 6, source: tab_some_asssos[i][5])
+	end
+end
+
+
 
 joanne = User.create(email: "jojo@free.fr", password: "tructruc", admin: true, name: "Joanne", surname: "Rabenarisoa")
 puts "Utilisateur Joanne créé"
