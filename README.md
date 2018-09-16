@@ -1,42 +1,60 @@
-README
-Notre site :
-https://.herokuapp.com/ 
 
 
+# README
 
-Les fonctionalités
+## Notre site :
+🥓 https://chatonpix.herokuapp.com/ 🥓
 
+<img src = "https://i.imgur.com/3wld7Pp.gif"</img>
 
-Photos de chats (vue index et détail par image + ajout au panier)
+## Les fonctionalités
 
-L'utilisateur devra s'inscrire pour faire un achat
+<img src = "https://image.ibb.co/kQjPYU/Capture_d_e_cran_2018_08_27_a_14_23_07.png"></img>
+- Photos de chats 
+(vue index et détail par image + ajout au panier)
 
-Accès au dashboard (pour les administrateurs) Identifiants pour tester l'affichage dans le profil :
+- L'utilisateur devra s'inscrire pour faire un achat
+  
+- Accès au dashboard (pour les administrateurs)
+  Identifiants pour tester l'affichage dans le profil :
+  
+    - email : jojo@jojo.fr
+    - mot de passe : jeteste
 
-email : jojo@jojo.fr
-mot de passe : jeteste
-Panier
+- Panier 
+   - Possibilité de supprimer un article
 
-Possibilité de supprimer un article
-Passer une commande
+- Passer une commande
+  
+- Envoi d'email de confirmation
 
-Envoi d'email de confirmation
+- Paiement en ligne avec Stripe
 
-Paiement en ligne avec Stripe
+## Model Base de donnée Card - Item -> Intransitive Associations
+<img src = "https://image.ibb.co/nKzKpz/Capture_d_e_cran_2018_09_16_a_22_00_53.png"</img>
 
-Model Base de donnée Card - Item -> Intransitive Associations
-https://image.ibb.co/nKzKpz/Capture_d_e_cran_2018_09_16_a_22_00_53.png
-
-Visualiser le site en local
+## Visualiser le site en local
+```sh
 $ bundle install --without production
+```
+```sh
 $ rails db:migrate
+```
+```sh
 $ rails db:seed
+```
+```sh
 $ ajouter les crédentials de test Stripe dans le fichier .bash_profile (https://stripe.com/docs/checkout/rails)
+```
+```sh
 $ rails s
-❗️Pour afficher les images, décommente la partie qui crée des Items dans le seed.rb puis fais rails db : seed
+```
+❗️
 
-L'équipe
-➢ Rémi Boivin 🤖
-➢ Gwendoline Cassand 👩‍💻
-➢ Mai Lan Peng 👻
-➢ Joanne Rabenarisoa 😽
+## L'équipe
+
+- ➢ Rémi Boivin 🤖
+- ➢ Gwendoline Cassand 👩‍💻
+- ➢ Mai Lan Peng 👻
+- ➢ Joanne Rabenarisoa 😽
+
