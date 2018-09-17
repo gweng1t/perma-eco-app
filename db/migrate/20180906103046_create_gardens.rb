@@ -5,9 +5,8 @@ class CreateGardens < ActiveRecord::Migration[5.2]
       t.belongs_to :plantae
       t.belongs_to :sol
     	t.integer :plantae_id2
-      t.boolean :is_valide
+      # t.boolean :is_valide
     	t.integer :source
-
 		t.timestamps
     end
   end
