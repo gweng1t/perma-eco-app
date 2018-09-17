@@ -170,8 +170,20 @@
 
                             <p class="lead">Notre volonté s'inscrit dans le cadre d'une reconstruction de nos écosystemes, et dans l'établissement d'une pensée nouvelle de l'agriculture, via une rentabilité retrouvée et prouvé de nos écosystèmes.</p class="lead">
 
-                                </p>
+                            </p></br></br>
+                                <form method="post" action="/search">
+                                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                    <div class="row">
+                                        <div class="col-md-12 mb20">
+                                            <input type="text" class="form-control" placeholder="Ex: tomates sol argileux" required="" name="plante_search">
+                                        </div>
 
+                                        <div class="col-md-12">
+                                            <!-- IL FAUT CHANGER LE BUTTON EN BALISE <a> :D -->
+                                            <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                             <div class='col-lg-3 mr-auto mb40 wow zoomInUp' data-wow-delay=".1s">
                                 <img src=<%= asset_path 'carotte.jpg' %> alt="" class="img-fluid center-img">
