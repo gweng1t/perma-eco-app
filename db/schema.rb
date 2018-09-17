@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_06_153705) do
+ActiveRecord::Schema.define(version: 2018_09_14_124015) do
 
   create_table "associations", force: :cascade do |t|
     t.integer "plantae_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_09_06_153705) do
     t.integer "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "id_sol"
     t.index ["plantae_id"], name: "index_associations_on_plantae_id"
   end
 
@@ -42,6 +43,11 @@ ActiveRecord::Schema.define(version: 2018_09_06_153705) do
     t.string "Type"
     t.string "Img"
     t.string "Plante"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sols", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
