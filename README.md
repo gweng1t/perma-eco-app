@@ -25,7 +25,7 @@ Permet l'association et l'addition de fiche type a la base de données.
 ## L'équipe
 
 - ➢ Rémi Boivin 🤖
-- ➢ Gwendoline Cassand 👩‍💻
+- ➢ G.C 👩‍💻
 - ➢ Matthieu Duchateau 🤯
 - ➢ Mai Lan Peng 👻
 - ➢ Joanne Rabenarisoa 😽
